@@ -9,7 +9,8 @@
     "start": "bun run src/app.ts",
     "test": "bun test",
     "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix"
+    "lint:fix": "eslint . --ext .ts --fix",
+    "scan": "bun run scripts/scan.ts"
   },
   "dependencies": {
     "cheerio": "^1.0.0",

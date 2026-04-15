@@ -26,6 +26,7 @@ Thumbs.db
 *.log
 
 # Testing
+test/
 coverage/
 
 # OS

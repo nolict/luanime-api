@@ -1,6 +1,7 @@
 import Elysia from "elysia";
 import { config } from "./config/config";
 import { healthRoute } from "./routes/healthRoute";
+import { homeRoute } from "./routes/homeRoute";
 import { errorHandler } from "./middlewares/errorHandler";
 import { logRequest } from "./config/logger";
 
@@ -19,7 +20,8 @@ const app = new Elysia()
     const message = error instanceof Error ? error.message : String(error);
     logRequest(request.method, url.pathname, status, 0, message);
   })
-  .use(healthRoute);
+  .use(healthRoute)
+  .use(homeRoute);
 
 if (config.nodeEnv === "development") {
   console.log(`Luanime API started on http://localhost:${config.port}`);
